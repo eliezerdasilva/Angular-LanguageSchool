@@ -7,12 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './componet/header/header.component';
 import { FooterComponent } from './componet/footer/footer.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent,
+    LoginPageComponent,
+    AdminPageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
