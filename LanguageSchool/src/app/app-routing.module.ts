@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
+import { AuthGuard } from './services/auth/auth-guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminPageComponent,
-    canActivate: [false]
+    canActivate: [AuthGuard]
   },
   
 ];
