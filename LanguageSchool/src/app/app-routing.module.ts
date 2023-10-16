@@ -7,20 +7,21 @@ import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: HomePageComponent
   },
   {
-    path: '/about',
+    path: 'about',
     component: AboutPageComponent
   },
   {
-    path: '/login',
+    path: 'login',
     component: LoginPageComponent
   },
   {
-    path: '/admin',
-    component: AdminPageComponent
+    path: 'admin',
+    component: AdminPageComponent,
+    canActivate: [false]
   },
   
 ];
