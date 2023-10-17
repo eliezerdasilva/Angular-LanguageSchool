@@ -12,7 +12,7 @@ import { UpdateStudentDTO } from '../../dtos/student/update-student.dto';
 })
 export class StudentService implements IService {
 
-  private STUDENT_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.STUDENTS}`
+  private STUDENT_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.STUDENTS}`
 
   constructor(private readonly http: HttpClient) { }
 

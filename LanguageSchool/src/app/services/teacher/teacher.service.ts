@@ -11,7 +11,7 @@ import { UpdateTeacherDTO } from 'src/app/dtos/teacher/update-teacher.dto';
 })
 export class TeacherService implements IService { 
 
-  private TEACHERS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.TEACHERS}`
+  private TEACHERS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.TEACHERS}`
 
   constructor(private readonly http: HttpClient) { }
   findAll(): Observable<TeacherDTO[]> {

@@ -12,7 +12,7 @@ import { UpdateClassroomDTO } from 'src/app/dtos/classroom/update-classroom.dto'
 })
 export class ClassroomService implements IService{
 
-  private CLASSROOMS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.CLASSROOMS}`
+  private CLASSROOMS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.CLASSROOMS}`
 
   constructor(private readonly http: HttpClient) { }
   findAll(): Observable<ClassroomDTO[]> {
