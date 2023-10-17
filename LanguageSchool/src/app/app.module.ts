@@ -15,6 +15,7 @@ import { MaterialExportModule } from 'src/app/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LoginPageModule } from './pages/login-page/login-page.module';
+import { ClassroomContentComponent } from './pages/admin-page/content/classroom-content/classroom-content.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginPageModule } from './pages/login-page/login-page.module';
     FooterComponent,
     HomePageComponent,
     AdminPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ClassroomContentComponent
   ],
   imports: [
     BrowserModule,
