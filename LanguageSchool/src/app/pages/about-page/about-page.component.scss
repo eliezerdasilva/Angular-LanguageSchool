@@ -1,0 +1,83 @@
+.page-section {
+    background-color: #f2f2f2;
+    padding: 80px 0;
+    margin: 0; /* Adicione esta linha para remover margens */
+    overflow-x: hidden; /* Adicione esta linha para ocultar barras de rolagem horizontais */
+  }
+/* Estilos para a seção principal */
+.page-section {
+    background-color: #cfc8c8;
+    padding: 80px 0;
+  }
+  
+  /* Estilos para os títulos da seção */
+  .section-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .section-subheading {
+    font-size: 18px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  /* Estilos para a linha do tempo */
+  .timeline {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline li {
+    margin-bottom: 50px;
+  }
+  
+  /* Estilos para as imagens da linha do tempo */
+  .timeline-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .timeline-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Estilos para os painéis da linha do tempo */
+  .timeline-panel {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .timeline-heading h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-heading .subheading {
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  .timeline-body p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  
+  /* Estilos para os painéis sem imagem */
+  .timeline-inverted .timeline-panel .timeline-image {
+    display: none;
+  }
+  
