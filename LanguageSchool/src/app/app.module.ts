@@ -11,7 +11,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
-
+import { MaterialExportModule } from 'src/app/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -31,7 +31,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MaterialExportModule
   ],
   providers: [],
   bootstrap: [AppComponent]
