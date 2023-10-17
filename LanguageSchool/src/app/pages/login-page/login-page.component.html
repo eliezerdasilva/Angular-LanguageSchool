@@ -1,9 +1,15 @@
-<div class="form-container">
-    <form action="">
-        <h1>Username</h1>
-        <input type="text">
-        <h1>Password</h1>
-        <input type="text">
-        <button>Submit</button>
-    </form>
+<div class="login-page">
+    <div class="form-container">
+        <form [formGroup]="form">
+            <div class="box">
+                <h1>Username</h1>
+                <input type="text" formControlName="username">
+            </div>
+            <div class="box">
+                <h1>Password</h1>
+                <input type="text" formControlName="password">
+            </div>
+            <button (click)="onSubmit()">Login</button>
+        </form>
+    </div>
 </div>

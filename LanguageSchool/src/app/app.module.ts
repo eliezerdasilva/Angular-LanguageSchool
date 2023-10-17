@@ -14,6 +14,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { MaterialExportModule } from 'src/app/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { LoginPageModule } from './pages/login-page/login-page.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,6 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
-    LoginPageComponent,
     AdminPageComponent,
     AboutPageComponent
   ],
@@ -32,7 +32,8 @@ import { RouterModule } from '@angular/router';
     NgbModule,
     HttpClientModule,
     RouterModule,
-    MaterialExportModule
+    MaterialExportModule,
+    LoginPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,55 @@
+.admin-page {
+    height: 100%;
+    width: 100vw;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.sidebar {
+    height: 100%;
+    width: 15%;
+    background-color: bisque;
+    padding: 2rem;
+    transform: translateX(0);
+    transition: move 4s;
+    
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-100vw);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+
+.sidebar-button {
+    width: 50px;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #333;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    
+}
+
+
+.hidden {
+    display: none;
+}
+
+.line {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    // margin: 5px;
+    
+}
