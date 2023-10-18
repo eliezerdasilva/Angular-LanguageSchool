@@ -9,8 +9,8 @@ export class CreateClassroomDTO {
     constructor(obj: any) {
         this.classCode = obj.classCode
         this.teacherId = obj.teacherId
-        this.languageType = obj.languageType
-        this.languageLevel = obj.languageLevel
+        this.languageType = obj.language
+        this.languageLevel = obj.level
         this.startDate = obj.startDate
         this.endDate = obj.endDate
     }

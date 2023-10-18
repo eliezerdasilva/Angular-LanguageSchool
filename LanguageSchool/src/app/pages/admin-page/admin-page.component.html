@@ -10,14 +10,29 @@
     
     <div class="content-container">
         <div class="sidebar">
-            <div class="option-btn" (click)="onOptionClick('classroom')">
-                Classrooms
+            <div class="pack-btn">
+                <div class="option-btn" (click)="onOptionClick('classroom')">
+                    Classrooms
+                </div>
+                <div class="create-wrapper" (click)="onCreateClick('classroom')">
+                    <p>Create new Classroom +</p>
+                </div>
             </div>
-            <div class="option-btn" (click)="onOptionClick('teacher')">
-                Teachers
+            <div class="pack-btn">
+                <div class="option-btn" (click)="onOptionClick('teacher')">
+                    Teachers
+                </div>
+                <div class="create-wrapper" (click)="onCreateClick('teacher')">
+                    <p>Create new Teacher +</p>
+                </div>
             </div>
-            <div class="option-btn" (click)="onOptionClick('student')">
-                Students
+            <div class="pack-btn">
+                <div class="option-btn" (click)="onOptionClick('student')">
+                    Students
+                </div>
+                <div class="create-wrapper" (click)="onCreateClick('student')">
+                    <p>Create new Student +</p>
+                </div>
             </div>
         </div>
         <div class="content-outer">

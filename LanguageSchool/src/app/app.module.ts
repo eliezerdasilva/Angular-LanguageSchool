@@ -20,6 +20,7 @@ import { StudentContentComponent } from './pages/admin-page/content/student-cont
 import { ModalComponent } from './pages/admin-page/components/modal/modal.component';
 import { CustomTableComponent } from './pages/admin-page/content/components/custom-table/custom-table.component';
 import { TeacherContentComponent } from './pages/admin-page/content/teacher-content/teacher-content.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { TeacherContentComponent } from './pages/admin-page/content/teacher-cont
     HttpClientModule,
     RouterModule,
     MaterialExportModule,
-    LoginPageModule
+    LoginPageModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,40 +1,48 @@
-<div class="whole">
+<div class="whole hidden">
     <div class="modal">
         <div class="form-container">
             
-            <form class="real-form">
+            <form class="real-form" [formGroup]="formGroup">
                 
                 <div class="img-text">
                     <div class="img-container">
                         <img src="../../../../../assets/pexels-tima-miroshnichenko-6549356.jpg" alt="">
                     </div>
                     <div class="title-text">
-                        <h1>Title</h1>
+                        <h1>{{ dtoType }}</h1>
                     </div>
                 </div>
-                <div class="container container-info">
+
+                <div class="container container-info" *ngIf="dtoType === 'student'">
                     <div class="part">
                         <div>
                             <p>Name: </p>
-                            <input type="text">
+                            <input type="text" formControlName="name">
                         </div>
                         <div>
                             <p>Last Name: </p>
-                            <input type="text">
+                            <input type="text" formControlName="lastName">
                         </div>
                         <div class="info-pack">
                             <div class="info-unit">
                                 <p>Language</p>
-                                <select name="" id="">
-                                    <option value="">A1</option>
-                                    <option value="">A1</option>
+                                <select name="" id="" formControlName="language">
+                                    <option value="ENGLISH">English</option>
+                                    <option value="SPANISH">Spanish</option>
+                                    <option value="FRENCH">French</option>
+                                    <option value="GERMAN">German</option>
+                                    <option value="PORTUGUESE">Portuguese</option>
                                 </select>
                             </div>
                             <div class="info-unit">
                                 <p>Level</p>
-                                <select name="" id="">
-                                    <option value="">A1</option>
-                                    <option value="">A1</option>
+                                <select name="" id="" formControlName="level">
+                                    <option [value]="'A1'">A1</option>
+                                    <option [value]="'A2'">A2</option>
+                                    <option [value]="'B1'">B1</option>
+                                    <option [value]="'B2'">B2</option>
+                                    <option [value]="'C1'">C1</option>
+                                    <option [value]="'C2'">C2</option>
                                 </select>
                             </div>
                         </div>
@@ -42,24 +50,103 @@
                     <div class="part">
                         <div>
                             <p>Street: </p>
-                            <input type="text">
+                            <input type="text" formControlName="street">
                         </div>
                         <div>
                             <p>City: </p>
-                            <input type="text">
+                            <input type="text" formControlName="city">
                         </div>
                         <div>
                             <p>Country: </p>
-                            <input type="text">
+                            <input type="text" formControlName="country">
                         </div>
                     </div>
                 </div>
+
+                <div class="container container-info" *ngIf="dtoType === 'teacher'">
+                    <div class="part">
+                        <div>
+                            <p>Name: </p>
+                            <input type="text" formControlName="name">
+                        </div>
+                        <div>
+                            <p>Last Name: </p>
+                            <input type="text" formControlName="lastName">
+                        </div>
+                        <div class="info-pack">
+                            <div class="info-unit">
+                                <p>Language</p>
+                                <select name="" id="" formControlName="language">
+                                    <option value="ENGLISH">English</option>
+                                    <option value="SPANISH">Spanish</option>
+                                    <option value="FRENCH">French</option>
+                                    <option value="GERMAN">German</option>
+                                    <option value="PORTUGUESE">Portuguese</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div>
+                            <p>Street: </p>
+                            <input type="text" formControlName="street">
+                        </div>
+                        <div>
+                            <p>City: </p>
+                            <input type="text" formControlName="city">
+                        </div>
+                        <div>
+                            <p>Country: </p>
+                            <input type="text" formControlName="country">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container container-info" *ngIf="dtoType === 'classroom'">
+                    <div class="part">
+                        <div>
+                            <p>Classcode: </p>
+                            <input type="text" formControlName="classCode">
+                        </div>
+                        <div>
+                            <p>Teacher id: </p>
+                            <input type="text" formControlName="teacherId">
+                        </div>
+                        
+                    </div>
+                    <div class="part">
+                        <div class="info-pack">
+                            <div class="info-unit">
+                                <p>Language</p>
+                                <select name="" id="" formControlName="language">
+                                    <option value="ENGLISH">English</option>
+                                    <option value="SPANISH">Spanish</option>
+                                    <option value="FRENCH">French</option>
+                                    <option value="GERMAN">German</option>
+                                    <option value="PORTUGUESE">Portuguese</option>
+                                </select>
+                            </div>
+                            <div class="info-unit">
+                                <p>Level</p>
+                                <select name="" id="" formControlName="level">
+                                    <option [value]="'A1'">A1</option>
+                                    <option [value]="'A2'">A2</option>
+                                    <option [value]="'B1'">B1</option>
+                                    <option [value]="'B2'">B2</option>
+                                    <option [value]="'C1'">C1</option>
+                                    <option [value]="'C2'">C2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="container container-btns">
                     <div class="btn-pack">
                         <div class="btn btn--cancel" (click)="onCancel()">Cancel</div>
-                        <div class="btn btn--save" (click)="onSave()">Save</div>
+                        <div class="btn btn--save" (click)="onSaveBtnClick()">Save</div>
                     </div>
-                    <div class="btn btn--delete" (click)="onDelete()">Delete Forever</div>
+                    <div *ngIf="isDto" class="btn btn--delete" (click)="onDelete()">Delete Forever</div>
                 </div>
             </form>
         </div>

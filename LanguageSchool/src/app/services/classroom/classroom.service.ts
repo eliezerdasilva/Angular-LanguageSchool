@@ -8,26 +8,30 @@ import { CreateClassroomDTO } from 'src/app/dtos/classroom/create-classroom.dto'
 import { UpdateClassroomDTO } from 'src/app/dtos/classroom/update-classroom.dto';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClassroomService implements IService{
+  private CLASSROOMS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.CLASSROOMS}`;
 
-  private CLASSROOMS_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.CLASSROOMS}`
+  constructor(private readonly http: HttpClient) {}
 
-  constructor(private readonly http: HttpClient) { }
   findAll(): Observable<ClassroomDTO[]> {
-    return this.http.get<ClassroomDTO[]>(this.CLASSROOMS_URL)
+    return this.http.get<ClassroomDTO[]>(this.CLASSROOMS_URL);
   }
+
   findOne(index: number): Observable<ClassroomDTO> {
-    return this.http.get<ClassroomDTO>(`${this.CLASSROOMS_URL}/${index}`)
+    return this.http.get<ClassroomDTO>(`${this.CLASSROOMS_URL}/${index}`);
   }
-  create(dto: CreateClassroomDTO): void {
-    this.http.post<ClassroomDTO[]>(this.CLASSROOMS_URL, dto)
+
+  create(dto: CreateClassroomDTO): Observable<any> {
+    return this.http.post(this.CLASSROOMS_URL, dto);
   }
-  update(index: number, dto: UpdateClassroomDTO): void {
-    this.http.put<ClassroomDTO>(`${this.CLASSROOMS_URL}/${index}`, dto)
+
+  update(index: number, dto: UpdateClassroomDTO): Observable<any> {
+    return this.http.put(`${this.CLASSROOMS_URL}/${index}`, dto);
   }
-  delete(index: number): void {
-    this.http.delete(`${this.CLASSROOMS_URL}/${index}`)
+
+  delete(index: number): Observable<any> {
+    return this.http.delete(`${this.CLASSROOMS_URL}/${index}`);
   }
 }

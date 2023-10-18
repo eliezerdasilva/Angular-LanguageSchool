@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ModalService } from 'src/app/services/modal/modal.service';
 
 @Component({
   selector: 'app-custom-table',
@@ -7,10 +8,20 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomTableComponent {
 
+  constructor(private readonly modalService: ModalService) {
+
+  }
+
   @Input()
   dtos?: any
 
   @Input()
   dtoType?: string
+
+
+  onSendDtoToParent(dto: any) {
+    this.modalService.sendDtoToModal(dto, this.dtoType!)
+  }
+
 
 }

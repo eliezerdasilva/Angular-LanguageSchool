@@ -4,31 +4,40 @@ import ServiceConstants from '../constants';
 import { Observable } from 'rxjs';
 import { IService } from '../IService';
 import { StudentDTO } from '../../dtos/student/student.dto';
-import { CreateClassroomDTO } from '../../dtos/classroom/create-classroom.dto';
 import { UpdateStudentDTO } from '../../dtos/student/update-student.dto';
+import { CreateStudentDTO } from 'src/app/dtos/student/create-student.dto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService implements IService {
+  private STUDENT_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.STUDENTS}`;
 
-  private STUDENT_URL = `${ServiceConstants.BASE_URL}${ServiceConstants.MIDDLE}${ServiceConstants.STUDENTS}`
-
-  constructor(private readonly http: HttpClient) { }
+  constructor(private readonly http: HttpClient) {}
 
   findAll(): Observable<StudentDTO[]> {
-    return this.http.get<StudentDTO[]>(this.STUDENT_URL)
+    return this.http.get<StudentDTO[]>(this.STUDENT_URL);
   }
+
   findOne(index: number): Observable<StudentDTO> {
     return this.http.get<StudentDTO>(`${this.STUDENT_URL}/${index}`);
   }
-  create(dto: CreateClassroomDTO): void {
-    this.http.post(this.STUDENT_URL, dto);
+
+  create(dto: CreateStudentDTO): Observable<any> {
+    return this.http.post(this.STUDENT_URL, dto);
   }
-  update(index: number, dto: UpdateStudentDTO): void {
-    this.http.put(`${this.STUDENT_URL}/${index}`, dto);
+
+  update(index: number, dto: UpdateStudentDTO): Observable<any> {
+    return this.http.put(`${this.STUDENT_URL}/${index}`, dto);
   }
-  delete(index: number): void {
-    this.http.delete(`${this.STUDENT_URL}/${index}`)
+
+  delete(index: number): Observable<any> {
+    return this.http.delete(`${this.STUDENT_URL}/${index}`);
   }
 }
+
+
+
+
+
+

@@ -12,12 +12,12 @@ export class CreateStudentDTO {
     constructor(obj: any) {
         this.name = obj.name
         this.lastName = obj.lastName
-        this.birthday = obj.birthday
+        this.birthday = obj.birthday || new Date()
         this.street = obj.street
         this.city = obj.city
         this.country = obj.country
         this.zipcode = obj.zipcode
-        this.active = obj.active
-        this.classroomId = obj.classroomId
+        this.active = obj.active || false
+        this.classroomId = obj.classroomId || 1
     }
 }

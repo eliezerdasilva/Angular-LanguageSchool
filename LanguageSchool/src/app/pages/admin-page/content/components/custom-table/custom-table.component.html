@@ -6,7 +6,7 @@
             <th>Class</th>
             <th>Active</th>
         </tr>
-        <tr *ngFor="let d of dtos">
+        <tr *ngFor="let d of dtos" (click)="onSendDtoToParent(d)">
             <td>{{ d.name }}</td>
             <td>{{ d.classroomId }}</td>
             <td>{{ d.active }}</td>
@@ -17,10 +17,10 @@
     <table *ngIf="dtoType == 'teacher'">
         <tr class="t-header" >
             <th>Name</th>
-            <th>Birthday</th>
+            <th>Last Name</th>
             <th>Active</th>
         </tr>
-        <tr *ngFor="let d of dtos">
+        <tr *ngFor="let d of dtos" (click)="onSendDtoToParent(d)">
             <td>{{ d.name }}</td>
             <td>{{ d.lastName }}</td>
             <td>{{ d.active }}</td>
@@ -33,10 +33,10 @@
             <th>Language</th>
             <th>Level</th>
         </tr>
-        <tr *ngFor="let c of dtos">
+        <tr *ngFor="let c of dtos" (click)="onSendDtoToParent(c)">
             <td>{{ c.classCode }}</td>
-            <td>{{ c.languageLevel }}</td>
             <td>{{ c.languageType }}</td>
+            <td>{{ c.languageLevel }}</td>
         </tr>
     </table>
 </div>

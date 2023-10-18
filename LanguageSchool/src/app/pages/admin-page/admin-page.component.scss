@@ -28,13 +28,29 @@
     align-items: center;
 }
 
+.pack-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-wrapper {
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 .sidebar .option-btn {
     width: 80%;
     padding: 2rem;
     background-color: lightgray;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.3rem;
+    font-weight: 500;
     border-radius: 10px;
     cursor: pointer;
 }
