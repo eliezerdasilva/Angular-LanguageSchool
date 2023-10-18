@@ -1,0 +1,39 @@
+.table-container {
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+}
+
+table {
+    background-color: aliceblue;
+    // height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+table tr th {
+    background-color: antiquewhite;
+    border-bottom: 2px solid burlywood;
+    border-right: 2px solid burlywood;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+table tr:hover td {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+table tr th:last-child {
+    border-right: 0;
+}
+
+table tr td {
+    padding: 20px;
+    border-bottom: 2px solid burlywood;
+    border-right: 2px solid burlywood;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}

@@ -8,6 +8,8 @@ export class StudentDTO {
     country: string
     zipcode: string
     active: boolean
+    language: string
+    level: string
     classroomId: number
 
     constructor(obj: any) {
@@ -20,6 +22,8 @@ export class StudentDTO {
         this.country = obj.country
         this.zipcode = obj.zipcode
         this.active = obj.active
+        this.language = obj.language
+        this.level = obj.languageLevel
         this.classroomId = obj.classroomId
     }
 }

@@ -1,0 +1,43 @@
+<div class="table-container">
+    
+    <table *ngIf="dtoType == 'student'">
+        <tr class="t-header" *ngIf="dtoType == 'student'">
+            <th>Name</th>
+            <th>Class</th>
+            <th>Active</th>
+        </tr>
+        <tr *ngFor="let d of dtos">
+            <td>{{ d.name }}</td>
+            <td>{{ d.classroomId }}</td>
+            <td>{{ d.active }}</td>
+        </tr>
+
+    </table>
+
+    <table *ngIf="dtoType == 'teacher'">
+        <tr class="t-header" >
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Active</th>
+        </tr>
+        <tr *ngFor="let d of dtos">
+            <td>{{ d.name }}</td>
+            <td>{{ d.lastName }}</td>
+            <td>{{ d.active }}</td>
+        </tr>
+    </table>
+
+    <table *ngIf="dtoType == 'classroom'">
+        <tr class="t-header" >
+            <th>Class</th>
+            <th>Language</th>
+            <th>Level</th>
+        </tr>
+        <tr *ngFor="let c of dtos">
+            <td>{{ c.classCode }}</td>
+            <td>{{ c.languageLevel }}</td>
+            <td>{{ c.languageType }}</td>
+        </tr>
+    </table>
+</div>
+

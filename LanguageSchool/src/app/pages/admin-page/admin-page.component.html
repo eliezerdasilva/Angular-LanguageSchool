@@ -1,4 +1,7 @@
+
 <div class="admin-page">
+    <app-modal></app-modal>
+
     <div class="sidebar-button">
         <div class="line"></div>
         <div class="line"></div>
@@ -7,17 +10,22 @@
     
     <div class="content-container">
         <div class="sidebar">
-            <div class="option-btn">
+            <div class="option-btn" (click)="onOptionClick('classroom')">
                 Classrooms
             </div>
-            <div class="option-btn">
+            <div class="option-btn" (click)="onOptionClick('teacher')">
                 Teachers
             </div>
-            <div class="option-btn">
+            <div class="option-btn" (click)="onOptionClick('student')">
                 Students
             </div>
         </div>
-        <div class="content">
+        <div class="content-outer">
+            <div class="content-inner">
+                <div class="content">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
         </div>
     </div>
 </div>

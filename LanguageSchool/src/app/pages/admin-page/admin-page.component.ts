@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserContentComponent } from './content/user-content/user-content.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-page',
@@ -8,5 +8,11 @@ import { UserContentComponent } from './content/user-content/user-content.compon
 })
 export class AdminPageComponent {
 
-  // public selectedContent = UserContentComponent;
+  constructor(private readonly router: Router) {}
+
+
+  onOptionClick(select: string) {
+    this.router.navigate([`/admin/${select}`])
+  }
+
 }

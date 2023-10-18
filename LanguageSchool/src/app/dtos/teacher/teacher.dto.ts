@@ -1,4 +1,4 @@
-class TeacherDTO {
+export class TeacherDTO {
     id: number
     name: string
     lastName: string

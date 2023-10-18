@@ -16,6 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LoginPageModule } from './pages/login-page/login-page.module';
 import { ClassroomContentComponent } from './pages/admin-page/content/classroom-content/classroom-content.component';
+import { StudentContentComponent } from './pages/admin-page/content/student-content/student-content.component';
+import { ModalComponent } from './pages/admin-page/components/modal/modal.component';
+import { CustomTableComponent } from './pages/admin-page/content/components/custom-table/custom-table.component';
+import { TeacherContentComponent } from './pages/admin-page/content/teacher-content/teacher-content.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { ClassroomContentComponent } from './pages/admin-page/content/classroom-
     HomePageComponent,
     AdminPageComponent,
     AboutPageComponent,
-    ClassroomContentComponent
+    ClassroomContentComponent,
+    StudentContentComponent,
+    TeacherContentComponent,
+    ModalComponent,
+    CustomTableComponent
   ],
   imports: [
     BrowserModule,
